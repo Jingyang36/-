@@ -103,7 +103,7 @@ int main()
 				}
 				else if (sText[k] >= 'A' && sText[k] <= 'Z')
 				{
-					printf("%c", sKeyUp[sText[k] - 'A']);
+					printf("%c", sKeyUp[sText[k] - 'A']); // 求对应字母表中的下标
 				}
 			}
 			printf("\n");
