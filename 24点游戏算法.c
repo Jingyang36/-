@@ -19,8 +19,9 @@ int flag[4] = {0};
 
 int Dfs(int num)
 {
-    if(num == 24)
+    if(num == 24) //    /*1.判断边界，判断本阶段的DFS是否已经结束了*/
         return 1;
+     /*2.尝试每一种可能，类似于走迷宫中的在每一个点尝试每个方向*/
     for(int i = 0; i < 4; i++)
     {
         if(flag[i]==0)
