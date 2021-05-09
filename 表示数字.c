@@ -38,10 +38,10 @@ int main()
                 while(str[i] >= '0' && str[i] <= '9')
                 {
                     printf("%c",str[i]);
-                    i++;
+                    i++; //后面加*
                 }
-                printf("*");  
-                i--;
+                printf("*");  //下一位加*
+                i--; //回到原来数字位置
             }
             else             
                 printf("%c",str[i]);
