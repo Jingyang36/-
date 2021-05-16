@@ -103,3 +103,39 @@ int main()
 //     return 0;
 // }
 
+
+
+//快慢指针， 快比慢快k， 快到重点慢的正好倒数k
+struct ListNode* FindKthToTail(struct ListNode* pListHead, int k ) {
+    // write code here
+    //设一个快慢指针，快指针比慢指针快n步
+    if(pListHead==NULL || k<=0)
+    {
+        return NULL;
+    }
+    Node * fast =pListHead;
+    
+    
+    //快指针先走k步
+   
+    while(k--)
+    {
+        if(fast==NULL)
+            return NULL;
+        fast=fast->next;
+    }
+    
+    //慢指针开始走
+    Node * slow =pListHead;
+    while(fast!=NULL)
+    {
+        slow=slow->next;
+        fast=fast->next;
+    }
+    
+    return slow;
+    
+}
+————————————————
+版权声明：本文为CSDN博主「五颗粒粒」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_40076022/article/details/111561114
